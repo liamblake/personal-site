@@ -29,7 +29,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "prettier": "2.4.1"
+    "prettier": "2.4.1",
+    "typescript": "^4.4.3"
   },
   "homepage": "https://LiamBlake.github.io",
   "license": "0BSD",
