@@ -1,4 +1,4 @@
-name: Build & Lint
+name: Checks
 
 on:
   push:
@@ -40,4 +40,4 @@ jobs:
         run: npm install
 
       - name: Check with prettier
-        run: prettier --check .
+        run: npm run lint
