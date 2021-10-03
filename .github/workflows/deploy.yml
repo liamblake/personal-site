@@ -26,6 +26,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
 
       - name: Deploy
-      - uses: enriikke/gatsby-gh-pages-action@v2.1.1
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+        run: npm run deploy
+        env:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
