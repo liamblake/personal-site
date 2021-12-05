@@ -8,7 +8,7 @@ module.exports = {
     siteTitle: `Liam Blake`,
     siteDescription: ``,
     banner: ``,
-    siteUrl: `liamblake.github.io`,
+    siteUrl: `https://liamblake.github.io`,
   },
   plugins: [
     {
