@@ -22,7 +22,7 @@ const badgeStyle = {
 const LazyLiveProvider = loadable(async () => {
   const Module = await import(`react-live`)
   const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
-  return (props) => (
+  return props => (
     <LiveProvider {...props}>
       <div sx={badgeStyle}>Editor</div>
       <LiveEditor sx={{ marginBottom: `1rem`, borderRadius: `0.25rem` }} />
@@ -50,7 +50,12 @@ const Code = ({ codeString, language, live, noInline }) => {
     )
   }
   return (
-    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
+    <Highlight
+      {...defaultProps}
+      code={codeString}
+      language={language}
+      theme={theme}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (

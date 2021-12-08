@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
         <meta name="twitter:image" content={meta.banner} />
       </Helmet>
       <Global
-        styles={(theme) => ({
+        styles={theme => ({
           "*": {
             boxSizing: `border-box`,
           },
@@ -73,7 +73,11 @@ const Layout = ({ children }) => {
           },
         })}
       />
-      <main style={{ maxWidth: `1200px`, margin: `2rem auto`, padding: `1.5rem` }}>{children}</main>
+      <main
+        style={{ maxWidth: `1200px`, margin: `2rem auto`, padding: `1.5rem` }}
+      >
+        {children}
+      </main>
     </React.Fragment>
   )
 }

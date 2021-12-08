@@ -1,19 +1,17 @@
 {
   "private": true,
-  "name": "specimens",
-  "description": "Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.",
-  "version": "0.3.12",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "name": "personal-site",
+  "description": "Personal site built from the Specimens theme in Gatsby.",
+  "version": "0.1.0",
+  "author": "Liam Blake <liamlemblake@gmail.com>",
   "license": "0BSD",
-  "starter-name": "gatsby-starter-specimens",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "prettier src --check"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-specimens": "^4.0.0",
@@ -39,6 +37,7 @@
     "theme-ui": "^0.11.1"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "prettier": "^2.5.0"
   }
 }

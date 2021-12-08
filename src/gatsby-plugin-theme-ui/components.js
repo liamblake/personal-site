@@ -25,7 +25,7 @@ import {
 import { preToCodeBlock } from "mdx-utils"
 import Code from "../components/code"
 
-const heading = (Tag) => (props) =>
+const heading = Tag => props =>
   props.id ? (
     <Tag {...props} id={props.id}>
       <a
@@ -52,19 +52,33 @@ const shortcodes = {
   ),
   BorderRadius: ({ radii }) => <BorderRadius radii={radii} />,
   ColorFamilies: ({ colors }) => <ColorFamilies colors={colors} />,
-  ColorRow: ({ color, name, prefix }) => <ColorRow color={color} name={name} prefix={prefix} />,
+  ColorRow: ({ color, name, prefix }) => (
+    <ColorRow color={color} name={name} prefix={prefix} />
+  ),
   ColorSwatch: ({ color, name, minimal, prefix }) => (
     <ColorSwatch color={color} name={name} minimal={minimal} prefix={prefix} />
   ),
   Download: ({ name, src, bg, preview, notes }) => (
     <Download name={name} src={src} bg={bg} preview={preview} notes={notes} />
   ),
-  FontFamily: ({ fonts, previewText }) => <FontFamily fonts={fonts} previewText={previewText} />,
+  FontFamily: ({ fonts, previewText }) => (
+    <FontFamily fonts={fonts} previewText={previewText} />
+  ),
   FontSize: ({ fontSizes }) => <FontSize fontSizes={fontSizes} />,
-  FontWeight: ({ fontWeights, previewText }) => <FontWeight fontWeights={fontWeights} previewText={previewText} />,
-  Heading: ({ styles, config, previewText }) => <Heading styles={styles} config={config} previewText={previewText} />,
+  FontWeight: ({ fontWeights, previewText }) => (
+    <FontWeight fontWeights={fontWeights} previewText={previewText} />
+  ),
+  Heading: ({ styles, config, previewText }) => (
+    <Heading styles={styles} config={config} previewText={previewText} />
+  ),
   Palette: ({ colors, mode, single, minimal, prefix }) => (
-    <Palette colors={colors} mode={mode} single={single} minimal={minimal} prefix={prefix} />
+    <Palette
+      colors={colors}
+      mode={mode}
+      single={single}
+      minimal={minimal}
+      prefix={prefix}
+    />
   ),
   Shadow: ({ shadows }) => <Shadow shadows={shadows} />,
   Space: ({ space }) => <Space space={space} />,
@@ -74,7 +88,14 @@ const shortcodes = {
     </Table>
   ),
   Video: ({ autoplay, loop, muted, name, poster, src }) => (
-    <Video autoplay={autoplay} loop={loop} muted={muted} name={name} poster={poster} src={src} />
+    <Video
+      autoplay={autoplay}
+      loop={loop}
+      muted={muted}
+      name={name}
+      poster={poster}
+      src={src}
+    />
   ),
 }
 
@@ -85,7 +106,7 @@ const components = {
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
-  pre: (preProps) => {
+  pre: preProps => {
     const props = preToCodeBlock(preProps)
     // if there's a codeString and some props, we passed the test
     if (props) {
