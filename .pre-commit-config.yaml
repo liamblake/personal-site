@@ -1,6 +1,0 @@
-repos:
-  - repo: https://github.com/prettier/pre-commit
-    # This should be kept up to date with that in package.json, or as close as possible.
-    rev: v2.2.0
-    hooks:
-      - id: prettier
