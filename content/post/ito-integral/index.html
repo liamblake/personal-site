@@ -1,0 +1,31 @@
+---
+title: "Constructing the Itô Integral (Intuitively)"
+author: "Liam Blake"
+date: "10/04/2022"
+bibliography: references.bib
+math: true
+---
+
+
+
+<p><em>This is a placeholder article. The actual content is coming soon. Some WIP bits and pieces are below.</em></p>
+<div id="an-example" class="section level2">
+<h2>An example</h2>
+</div>
+<div id="itô-integrals-in-my-research" class="section level2">
+<h2>Itô integrals in my research</h2>
+<p>One way <span class="citation">(<span class="citeproc-not-found" data-reference-id="balasuriya"><strong>???</strong></span>; Balasuriya <a href="#ref-balasuriya_stochastic_2020" role="doc-biblioref">2020</a>)</span> to model this uncertainty is via a stochastic differential equation of the form
+<span class="math display">\[ 
+\mathrm{d}y_t = u(y_t, t)\mathrm{d}t + \varepsilon\sigma(y_t, t)\mathrm{d}W_t,
+\]</span>
+where <span class="math inline">\(\varepsilon\)</span> is a small positive number quantifying the scale of the noise, and <span class="math inline">\(\sigma\)</span> is a <span class="math inline">\(2\times 2\)</span> diffusion matrix, which sets how much noise is present at each point in space and time.
+The equivalent integral representation of this SDE is
+<span class="math display">\[
+y_t = x + \int_0^t{u(y_\tau, \tau)\mathrm{d}\tau} + \varepsilon\int_0^t{\sigma(y_\tau, \tau)\mathrm{d}W_\tau}.
+\]</span></p>
+<div id="refs" class="references">
+<div id="ref-balasuriya_stochastic_2020">
+<p>Balasuriya, Sanjeeva. 2020. “Stochastic Sensitivity: A Computable Lagrangian Uncertainty Measure for Unsteady Flows.” <em>SIAM Review</em> 62 (November): 781–816. <a href="https://doi.org/10.1137/18M1222922">https://doi.org/10.1137/18M1222922</a>.</p>
+</div>
+</div>
+</div>

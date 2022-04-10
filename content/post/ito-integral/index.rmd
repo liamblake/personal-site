@@ -1,0 +1,31 @@
+---
+title: "Constructing the Itô Integral (Intuitively)"
+author: "Liam Blake"
+date: "10/04/2022"
+bibliography: references.bib
+math: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+*This is a placeholder article. The actual content is coming soon. Some WIP bits and pieces are below.*
+
+
+
+
+## An example
+
+
+## Itô integrals in my research
+
+One way @balasuriya [@balasuriya_stochastic_2020] to model this uncertainty is via a stochastic differential equation of the form 
+$$ 
+\mathrm{d}y_t = u(y_t, t)\mathrm{d}t + \varepsilon\sigma(y_t, t)\mathrm{d}W_t,
+$$
+where $\varepsilon$ is a small positive number quantifying the scale of the noise, and \(\sigma\) is a \(2\times 2\) diffusion matrix, which sets how much noise is present at each point in space and time.
+The equivalent integral representation of this SDE is 
+$$
+y_t = x + \int_0^t{u(y_\tau, \tau)\mathrm{d}\tau} + \varepsilon\int_0^t{\sigma(y_\tau, \tau)\mathrm{d}W_\tau}.
+$$
