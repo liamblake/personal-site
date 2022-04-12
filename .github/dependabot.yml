@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Root folder
+  - package-ecosystem: "npm" 
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # ghostwriter theme
+  - package-ecosystem: "npm" 
+    directory: "/themes/ghostwriter"
+    schedule:
+      interval: "daily"
+
