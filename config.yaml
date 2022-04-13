@@ -1,26 +1,29 @@
 baseurl: /
 languageCode: en-us
-title: A Hugo website
-theme: "ghostwriter"
+title: Liam Blake
+theme: "LB-PaperMod"
 googleAnalytics: ''
 disqusShortname: ''
+
 ignoreFiles:
   - \.Rmd$
   - \.Rmarkdown$
   - _cache$
   - \.knit\.md$
   - \.utf8\.md$
+
 permalinks:
   post: /:year/:month/:day/:slug/
+  
 menu:
   main:
     - name: About Me
-      url: /about/
+      url: /
     - name: Blog 
       url: /post/
 params:
-  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
-  description: A website built through Hugo and blogdown.
+  ShowReadingTime: true
+  
   favicon: favicon.ico
   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
   highlightjsLang:

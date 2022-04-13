@@ -3,7 +3,7 @@ title: "Constructing the Itô Integral (Intuitively)"
 author: "Liam Blake"
 date: "10/04/2022"
 bibliography: references.bib
-math: true
+link-citations: true
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Itô integrals in my research
 
-One way @balasuriya [@balasuriya_stochastic_2020] to model this uncertainty is via a stochastic differential equation of the form 
+One way to model this uncertainty is via a stochastic differential equation of the form [@balasuriya_stochastic_2020]
 $$ 
 \mathrm{d}y_t = u(y_t, t)\mathrm{d}t + \varepsilon\sigma(y_t, t)\mathrm{d}W_t,
 $$
@@ -29,3 +29,8 @@ The equivalent integral representation of this SDE is
 $$
 y_t = x + \int_0^t{u(y_\tau, \tau)\mathrm{d}\tau} + \varepsilon\int_0^t{\sigma(y_\tau, \tau)\mathrm{d}W_\tau}.
 $$
+Understanding the behaviour of these solutions therefore comes down to understanding the statistics of an It\^o integral.
+
+
+
+## References

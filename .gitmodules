@@ -1,0 +1,3 @@
+[submodule "themes/LB-PaperMod"]
+	path = themes/LB-PaperMod
+	url = git@github.com:liamblake/LB-PaperMod.git
